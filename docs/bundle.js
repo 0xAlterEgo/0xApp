@@ -196,7 +196,7 @@ eval("\r\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\r\n
   \*********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skyrouter_1 = __webpack_require__(/*! skyrouter */ \"./node_modules/skyrouter/lib/index.js\");\nconst Home_1 = __importDefault(__webpack_require__(/*! ./view/Home */ \"./src/view/Home.ts\"));\n(async () => {\n    skyrouter_1.SkyRouter.route(\"\", Home_1.default);\n    if (sessionStorage.__spa_path) {\n        skyrouter_1.SkyRouter.go(sessionStorage.__spa_path);\n        sessionStorage.removeItem(\"__spa_path\");\n    }\n})();\n\n\n//# sourceURL=webpack:///./src/main.ts?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skyrouter_1 = __webpack_require__(/*! skyrouter */ \"./node_modules/skyrouter/lib/index.js\");\nconst Home_1 = __importDefault(__webpack_require__(/*! ./view/Home */ \"./src/view/Home.ts\"));\nconst Discord_1 = __importDefault(__webpack_require__(/*! ./view/sync/Discord */ \"./src/view/sync/Discord.ts\"));\nconst Wallet_1 = __importDefault(__webpack_require__(/*! ./view/sync/Wallet */ \"./src/view/sync/Wallet.ts\"));\n(async () => {\n    skyrouter_1.SkyRouter.route(\"\", Home_1.default);\n    skyrouter_1.SkyRouter.route(\"sync/discord\", Discord_1.default);\n    skyrouter_1.SkyRouter.route(\"sync/wallet\", Wallet_1.default);\n    if (sessionStorage.__spa_path) {\n        skyrouter_1.SkyRouter.go(sessionStorage.__spa_path);\n        sessionStorage.removeItem(\"__spa_path\");\n    }\n})();\n\n\n//# sourceURL=webpack:///./src/main.ts?");
 
 /***/ }),
 
@@ -206,7 +206,27 @@ eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {
   \**************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nclass Home {\n    constructor() {\n        this.container = (0, skynode_1.el)(\".home-view\", (0, skynode_1.el)(\"h2\", \"책과 세계관 소개\"), (0, skynode_1.el)(\"h2\", \"커뮤니티\"), (0, skynode_1.el)(\"h2\", \"크레이터\"), (0, skynode_1.el)(\"h2\", \"인플루엔서\"), (0, skynode_1.el)(\"h2\", \"콜렉터\"), (0, skynode_1.el)(\"h2\", \"데브팀\"), (0, skynode_1.el)(\"h2\", \"로드맵\")).appendTo(skynode_1.BodyNode);\n    }\n    changeParams(params, uri) { }\n    close() {\n        clearInterval(this.interval);\n        this.container.delete();\n    }\n}\nexports[\"default\"] = Home;\n\n\n//# sourceURL=webpack:///./src/view/Home.ts?");
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nclass Home {\n    constructor() {\n        this.container = (0, skynode_1.el)(\".home-view\").appendTo(skynode_1.BodyNode);\n    }\n    changeParams(params, uri) { }\n    close() {\n        clearInterval(this.interval);\n        this.container.delete();\n    }\n}\nexports[\"default\"] = Home;\n\n\n//# sourceURL=webpack:///./src/view/Home.ts?");
+
+/***/ }),
+
+/***/ "./src/view/sync/Discord.ts":
+/*!**********************************!*\
+  !*** ./src/view/sync/Discord.ts ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nclass SyncDiscord {\n    constructor() {\n        this.container = (0, skynode_1.el)(\".sync-discord-view\", (0, skynode_1.el)(\"header\", (0, skynode_1.el)(\"h1\", \"0xAlterEgo\"), (0, skynode_1.el)(\"h2\", \"Check Discord\")), (0, skynode_1.el)(\"article\", (0, skynode_1.el)(\"a.discord-login-button\", \"Check Discord\", {\n            href: \"https://discord.com/api/oauth2/authorize?client_id=939799459720728606&redirect_uri=https%3A%2F%2Fsigor.com%2Fcheckholder&response_type=code&scope=identify\",\n        }))).appendTo(skynode_1.BodyNode);\n    }\n    changeParams(params, uri) { }\n    close() {\n        clearInterval(this.interval);\n        this.container.delete();\n    }\n}\nexports[\"default\"] = SyncDiscord;\n\n\n//# sourceURL=webpack:///./src/view/sync/Discord.ts?");
+
+/***/ }),
+
+/***/ "./src/view/sync/Wallet.ts":
+/*!*********************************!*\
+  !*** ./src/view/sync/Wallet.ts ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nconst skynode_1 = __webpack_require__(/*! @hanul/skynode */ \"./node_modules/@hanul/skynode/lib/index.js\");\nclass SyncWallet {\n    constructor() {\n        this.container = (0, skynode_1.el)(\".sync-wallet-view\", (0, skynode_1.el)(\"header\", (0, skynode_1.el)(\"h1\", \"0xAlterEgo\"), (0, skynode_1.el)(\"h2\", \"Check Wallet\")), (0, skynode_1.el)(\"article\", (0, skynode_1.el)(\"a.discord-login-button\", \"Check Wallet\", {\n            href: \"https://discord.com/api/oauth2/authorize?client_id=939799459720728606&redirect_uri=https%3A%2F%2Fsigor.com%2Fcheckholder&response_type=code&scope=identify\",\n        }))).appendTo(skynode_1.BodyNode);\n    }\n    changeParams(params, uri) { }\n    close() {\n        clearInterval(this.interval);\n        this.container.delete();\n    }\n}\nexports[\"default\"] = SyncWallet;\n\n\n//# sourceURL=webpack:///./src/view/sync/Wallet.ts?");
 
 /***/ })
 

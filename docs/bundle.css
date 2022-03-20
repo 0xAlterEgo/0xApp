@@ -170,76 +170,205 @@ input {
   font-style: italic;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u-w4BMUTPHjxsIPy-v.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u-w4BMUTPHjxsIPy-v.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u_w4BMUTPHjxsI9w2PHA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u_w4BMUTPHjxsI9w2PHA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u8w4BMUTPHjxswWw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u8w4BMUTPHjxswWw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u_w4BMUTPHjxsI5wqPHA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u_w4BMUTPHjxsI5wqPHA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: italic;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u_w4BMUTPHjxsI3wiPHA.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u_w4BMUTPHjxsI3wiPHA.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 100;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u8w4BMUTPHh30wWw.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u8w4BMUTPHh30wWw.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh7USew8.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh7USew8.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6uyw4BMUTPHvxk.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHvxk.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh6UVew8.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh6UVew8.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/lato/v20/S6u9w4BMUTPHh50Xew8.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh50Xew8.ttf) format('truetype');
 }
 body {
   font-family: 'Lato', sans-serif;
   background: #121212;
-  color: rgba(255, 255, 255, 0.87);
-  display: flex;
   margin: auto;
+  color: white;
+}
+.sync-discord-view {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.sync-discord-view > header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 2;
+}
+.sync-discord-view > header > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.sync-discord-view > header > h2 {
+  font-size: 0.725rem;
+  padding-top: 8px;
+  font-weight: 300;
+}
+.sync-discord-view > article {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.sync-discord-view > article > img {
+  max-width: 30%;
+  transform-origin: 50% 50%;
+  margin: 2rem;
+}
+@media only screen and (max-width: 719px) {
+  .sync-discord-view > article > img {
+    max-width: 50%;
+  }
+}
+.sync-discord-view > article > p {
+  margin: 16px;
+  line-height: 2rem;
+}
+.sync-discord-view > article > a {
+  cursor: pointer;
+  display: block;
+  background-color: black;
+  padding: 16px 128px;
+  border-radius: 30px;
+  margin-top: 16px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(110, 75, 169, 0.8);
+}
+.sync-discord-view > article > a:hover {
+  background-color: rgba(110, 75, 169, 0.9);
+  color: black;
+}
+.sync-discord-view > article > a:active {
+  background-color: #6e4ba9;
+  color: black;
+}
+.sync-wallet-view {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.sync-wallet-view > header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 2;
+}
+.sync-wallet-view > header > h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.sync-wallet-view > header > h2 {
+  font-size: 0.725rem;
+  padding-top: 8px;
+  font-weight: 300;
+}
+.sync-wallet-view > article {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-top: 16px;
+}
+.sync-wallet-view > article > img {
+  max-width: 30%;
+  transform-origin: 50% 50%;
+  margin: 2rem;
+}
+@media only screen and (max-width: 719px) {
+  .sync-wallet-view > article > img {
+    max-width: 50%;
+  }
+}
+.sync-wallet-view > article > p {
+  margin: 16px;
+  line-height: 2rem;
+}
+.sync-wallet-view > article > a {
+  cursor: pointer;
+  display: block;
+  background-color: black;
+  padding: 16px 128px;
+  border-radius: 30px;
+  margin-top: 16px;
+  color: white;
+  text-decoration: none;
+  background-color: rgba(110, 75, 169, 0.8);
+}
+.sync-wallet-view > article > a:hover {
+  background-color: rgba(110, 75, 169, 0.9);
+  color: black;
+}
+.sync-wallet-view > article > a:active {
+  background-color: #6e4ba9;
+  color: black;
 }
 
