@@ -18,7 +18,7 @@ export default class LinkWalletToDiscord implements View {
             ),
             el("article",
                 el("a.discord-login-button", "Link Wallet", {
-                    href: "https://discord.com/api/oauth2/authorize?client_id=939799839129096244&redirect_uri=https%3A%2F%2F0xalterego.com%2Flink-wallet-to-discord&response_type=code&scope=identify",
+                    href: "https://discord.com/api/oauth2/authorize?client_id=939799839129096244&redirect_uri=https%3A%2F%2Fapp.0xalterego.com%2Flink-wallet-to-discord&response_type=code&scope=identify",
                 }),
             ),
         ).appendTo(BodyNode);
