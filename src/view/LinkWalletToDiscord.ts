@@ -14,7 +14,7 @@ export default class LinkWalletToDiscord implements View {
         this.container = el(".link-wallet-to-discord-view",
             el("header",
                 el("h1", "0xAlterEgo"),
-                el("h2", "Link Wallet to Discord"),
+                el("h2", "Please connect your wallet and sign this transaction to access the bot \nservices provided by 0xAlterEgo...!"),
             ),
             el("article",
                 el("a.discord-login-button", "Link Wallet", {
@@ -32,7 +32,7 @@ export default class LinkWalletToDiscord implements View {
             try {
                 await superagent.get("https://api.0xalterego.com/discord/token").query({
                     code,
-                    redirect_uri: `${window.location.protocol}//${window.location.host}/link-wallet-to-discord`,
+                    redirect_uri: `${window.location.protocol}/${window.location.host}/link-wallet-to-discord`,
                 });
             } catch (error) {
                 console.error(error);
