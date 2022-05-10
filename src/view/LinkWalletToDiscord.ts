@@ -32,7 +32,7 @@ export default class LinkWalletToDiscord implements View {
             try {
                 await superagent.get("https://api.0xalterego.com/discord/token").query({
                     code,
-                    redirect_uri: `${window.location.protocol}/${window.location.host}/link-wallet-to-discord`,
+                    redirect_uri: `${window.location.protocol}//${window.location.host}/link-wallet-to-discord`,
                 });
             } catch (error) {
                 console.error(error);
